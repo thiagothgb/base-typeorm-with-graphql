@@ -3,6 +3,14 @@
   "version": "0.0.1",
   "description": "Awesome project developed with TypeORM.",
   "type": "commonjs",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.8",
     "@babel/preset-env": "^7.22.7",
@@ -30,13 +38,5 @@
     "pg": "^8.4.0",
     "reflect-metadata": "^0.1.13",
     "typeorm": "0.3.17"
-  },
-  "scripts": {
-    "start": "ts-node src/index.ts",
-    "typeorm": "typeorm-ts-node-commonjs",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   }
 }
