@@ -1,10 +1,10 @@
 import "reflect-metadata";
 import "express-async-errors";
-import "dotenv/config";
+// import "dotenv/config";
+import "@shared/infra/typeorm";
 import cors from "cors";
 import express, { Request, NextFunction, Response } from "express";
 import AppError from "@shared/errors/AppError";
-import "@shared/infra/typeorm";
 import routes from "./routes";
 import rateLimiter from "./middleware/rateLimiter";
 
